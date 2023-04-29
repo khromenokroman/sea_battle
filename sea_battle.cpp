@@ -26,11 +26,23 @@ int main()
         ptr_data_hit[i] = data_hit[i];
     }
 
-    reset_data(ptr_data_ship, ptr_data_hit, MAX_RAW, MAX_COL);
+    if (menu == 1)
+    {
+        reset_data(ptr_data_ship, ptr_data_hit, MAX_RAW, MAX_COL);
+        create_ship(ptr_data_ship, MAX_RAW, MAX_COL);
+        draw_dashbord_ship_player(ptr_data_ship, MAX_RAW, MAX_COL); // выводим карту кораблей и стрельбы
+        draw_dashbord_hit_player(ptr_data_hit, MAX_RAW, MAX_COL);
+        write_file_ship_player(ptr_data_ship, MAX_RAW, MAX_COL);
+    }
+    else if (menu ==3)
+    {
+        load_file_ship_player(ptr_data_ship, MAX_RAW, MAX_COL);
+        draw_dashbord_ship_player(ptr_data_ship, MAX_RAW, MAX_COL);
+    }
 
-    create_ship(ptr_data_ship, MAX_RAW, MAX_COL);
+        
+    
 
-    draw_dashbord_ship_player(ptr_data_ship, MAX_RAW, MAX_COL); // выводим карту кораблей и стрельбы
-    draw_dashbord_hit_player(ptr_data_hit, MAX_RAW, MAX_COL);
-    write_file_ship_player(ptr_data_ship, MAX_RAW, MAX_COL);
+
+    
 }
