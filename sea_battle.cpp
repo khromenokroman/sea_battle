@@ -39,6 +39,11 @@ int main()
         load_file_ship_player(ptr_data_ship, MAX_RAW, MAX_COL);
         draw_dashbord_ship_player(ptr_data_ship, MAX_RAW, MAX_COL);
     }
+    else if (menu ==4)
+    {
+        std::cout << "До скорой встречи!!!\n";
+        return 0;
+    }
 
         
     
